@@ -1,0 +1,11 @@
+{
+    "watch": [
+        "src",
+        "include"
+    ],
+    "ignore": [
+        "build/**"
+    ],
+    "exec": "./build.sh",
+    "ext": "c,h"
+}

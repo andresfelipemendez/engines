@@ -4,11 +4,11 @@
 #include <GLFW/glfw3.h>
 
 #include "engine.h"
-#include "../../thirdparty/nuklear.h"
-#include "../../thirdparty/nk_glfw_gl3.h"
+#include "../../thirdparty/nuklear/nuklear.h"
+#include "../../thirdparty/nuklear/nuklear_glfw_gl4.h"
 
 static GLFWwindow* s_win = NULL;
-static struct nk_glfw s_ui; // mini backend state
+
 
 static GLuint s_prog=0, s_vao=0, s_vbo=0;
 static float  s_angle=0.0f;
@@ -59,14 +59,7 @@ static void make_triangle_program(void){
 }
 
 static void ui_frame(int fbw, int fbh){
-    nk_glfw_new_frame(&s_ui, fbw, fbh);
-    if (nk_begin(&s_ui.ctx, "Demo", nk_rect(10,10,220,140), NK_WINDOW_BORDER|NK_WINDOW_TITLE)){
-        nk_layout_row_dynamic(&s_ui.ctx, 24, 1);
-        nk_label(&s_ui.ctx, "OpenGL 4.1 + Nuklear", NK_TEXT_LEFT);
-        nk_property_float(&s_ui.ctx, "angle", 0.0f, &s_angle, 6.28318f, 0.01f, 0.01f);
-    }
-    nk_end(&s_ui.ctx);
-    nk_glfw_render(&s_ui);
+    
 }
 
 static void eng_init(void* glfw_window, int width, int height){
@@ -75,7 +68,7 @@ static void eng_init(void* glfw_window, int width, int height){
     glDisable(GL_BLEND);
     glEnable(GL_DEPTH_TEST);
     make_triangle_program();
-    nk_glfw_init(&s_ui, s_win);
+    // nk_glfw_init(&s_ui, s_win);
 }
 
 static void eng_resize(int width, int height){
@@ -100,7 +93,7 @@ static void eng_update(float dt){
 }
 
 static void eng_shutdown(void){
-    nk_glfw_shutdown(&s_ui);
+    
     glDeleteProgram(s_prog);
     glDeleteVertexArrays(1,&s_vao);
     glDeleteBuffers(1,&s_vbo);

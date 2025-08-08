@@ -7,7 +7,6 @@ extern "C" {
 #include <stddef.h>
 #include <stdint.h>
 
-// Thin C ABI between host and engine.dylib
 struct EngineAPI {
     void (*init)(void* glfw_window, int width, int height);
     void (*resize)(int width, int height);

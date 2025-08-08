@@ -1,0 +1,240 @@
+.
+├── build
+├── build.c
+├── build.sh
+├── nodemon.json
+├── src
+│   ├── engine
+│   │   ├── engine.c
+│   │   └── engine.h
+│   └── host
+│       └── main.c
+├── thirdparty
+│   ├── glad
+│   │   ├── glad.c
+│   │   ├── glad.h
+│   │   └── khrplatform.h
+│   ├── glfw
+│   │   ├── docs
+│   │   │   └── html
+│   │   │       ├── bc_s.png
+│   │   │       ├── bc_sd.png
+│   │   │       ├── build_8md.html
+│   │   │       ├── build_guide.html
+│   │   │       ├── closed.png
+│   │   │       ├── compat_8md.html
+│   │   │       ├── compat_guide.html
+│   │   │       ├── compile_8md.html
+│   │   │       ├── compile_guide.html
+│   │   │       ├── context_8md.html
+│   │   │       ├── context_guide.html
+│   │   │       ├── deprecated.html
+│   │   │       ├── dir_13577e2d8b9423099662de029791bd7d.html
+│   │   │       ├── dir_7f92719a7fe62e5b064f87d7a3c220b1.html
+│   │   │       ├── dir_a788ef6c2b1e5b367804e0b6ccfd6f11.html
+│   │   │       ├── dir_b11153cd0f4fd04a7564cc166f482635.html
+│   │   │       ├── doc.svg
+│   │   │       ├── docd.svg
+│   │   │       ├── doxygen.css
+│   │   │       ├── doxygen.svg
+│   │   │       ├── dynsections.js
+│   │   │       ├── extra.css
+│   │   │       ├── files.html
+│   │   │       ├── folderclosed.svg
+│   │   │       ├── folderclosedd.svg
+│   │   │       ├── folderopen.svg
+│   │   │       ├── folderopend.svg
+│   │   │       ├── glfw3_8h_source.html
+│   │   │       ├── glfw3_8h.html
+│   │   │       ├── glfw3native_8h_source.html
+│   │   │       ├── glfw3native_8h.html
+│   │   │       ├── group__buttons.html
+│   │   │       ├── group__context.html
+│   │   │       ├── group__errors.html
+│   │   │       ├── group__gamepad__axes.html
+│   │   │       ├── group__gamepad__buttons.html
+│   │   │       ├── group__hat__state.html
+│   │   │       ├── group__init.html
+│   │   │       ├── group__input.html
+│   │   │       ├── group__joysticks.html
+│   │   │       ├── group__keys.html
+│   │   │       ├── group__mods.html
+│   │   │       ├── group__monitor.html
+│   │   │       ├── group__native.html
+│   │   │       ├── group__shapes.html
+│   │   │       ├── group__vulkan.html
+│   │   │       ├── group__window.html
+│   │   │       ├── index.html
+│   │   │       ├── input_8md.html
+│   │   │       ├── input_guide.html
+│   │   │       ├── internal_8md.html
+│   │   │       ├── internals_guide.html
+│   │   │       ├── intro_8md.html
+│   │   │       ├── intro_guide.html
+│   │   │       ├── jquery.js
+│   │   │       ├── main_8md.html
+│   │   │       ├── menu.js
+│   │   │       ├── menudata.js
+│   │   │       ├── minus.svg
+│   │   │       ├── minusd.svg
+│   │   │       ├── monitor_8md.html
+│   │   │       ├── monitor_guide.html
+│   │   │       ├── moving_8md.html
+│   │   │       ├── moving_guide.html
+│   │   │       ├── nav_f.png
+│   │   │       ├── nav_fd.png
+│   │   │       ├── nav_g.png
+│   │   │       ├── nav_h.png
+│   │   │       ├── nav_hd.png
+│   │   │       ├── news_8md.html
+│   │   │       ├── news.html
+│   │   │       ├── open.png
+│   │   │       ├── pages.html
+│   │   │       ├── plus.svg
+│   │   │       ├── plusd.svg
+│   │   │       ├── quick_8md.html
+│   │   │       ├── quick_guide.html
+│   │   │       ├── search
+│   │   │       │   ├── all_0.js
+│   │   │       │   ├── all_1.js
+│   │   │       │   ├── all_10.js
+│   │   │       │   ├── all_11.js
+│   │   │       │   ├── all_12.js
+│   │   │       │   ├── all_13.js
+│   │   │       │   ├── all_14.js
+│   │   │       │   ├── all_15.js
+│   │   │       │   ├── all_16.js
+│   │   │       │   ├── all_17.js
+│   │   │       │   ├── all_18.js
+│   │   │       │   ├── all_19.js
+│   │   │       │   ├── all_1a.js
+│   │   │       │   ├── all_1b.js
+│   │   │       │   ├── all_1c.js
+│   │   │       │   ├── all_1d.js
+│   │   │       │   ├── all_1e.js
+│   │   │       │   ├── all_1f.js
+│   │   │       │   ├── all_2.js
+│   │   │       │   ├── all_3.js
+│   │   │       │   ├── all_4.js
+│   │   │       │   ├── all_5.js
+│   │   │       │   ├── all_6.js
+│   │   │       │   ├── all_7.js
+│   │   │       │   ├── all_8.js
+│   │   │       │   ├── all_9.js
+│   │   │       │   ├── all_a.js
+│   │   │       │   ├── all_b.js
+│   │   │       │   ├── all_c.js
+│   │   │       │   ├── all_d.js
+│   │   │       │   ├── all_e.js
+│   │   │       │   ├── all_f.js
+│   │   │       │   ├── classes_0.js
+│   │   │       │   ├── close.svg
+│   │   │       │   ├── defines_0.js
+│   │   │       │   ├── files_0.js
+│   │   │       │   ├── files_1.js
+│   │   │       │   ├── files_2.js
+│   │   │       │   ├── files_3.js
+│   │   │       │   ├── files_4.js
+│   │   │       │   ├── files_5.js
+│   │   │       │   ├── files_6.js
+│   │   │       │   ├── files_7.js
+│   │   │       │   ├── files_8.js
+│   │   │       │   ├── functions_0.js
+│   │   │       │   ├── groups_0.js
+│   │   │       │   ├── groups_1.js
+│   │   │       │   ├── groups_10.js
+│   │   │       │   ├── groups_2.js
+│   │   │       │   ├── groups_3.js
+│   │   │       │   ├── groups_4.js
+│   │   │       │   ├── groups_5.js
+│   │   │       │   ├── groups_6.js
+│   │   │       │   ├── groups_7.js
+│   │   │       │   ├── groups_8.js
+│   │   │       │   ├── groups_9.js
+│   │   │       │   ├── groups_a.js
+│   │   │       │   ├── groups_b.js
+│   │   │       │   ├── groups_c.js
+│   │   │       │   ├── groups_d.js
+│   │   │       │   ├── groups_e.js
+│   │   │       │   ├── groups_f.js
+│   │   │       │   ├── mag_d.svg
+│   │   │       │   ├── mag_sel.svg
+│   │   │       │   ├── mag_seld.svg
+│   │   │       │   ├── mag.svg
+│   │   │       │   ├── pages_0.js
+│   │   │       │   ├── pages_1.js
+│   │   │       │   ├── pages_10.js
+│   │   │       │   ├── pages_11.js
+│   │   │       │   ├── pages_2.js
+│   │   │       │   ├── pages_3.js
+│   │   │       │   ├── pages_4.js
+│   │   │       │   ├── pages_5.js
+│   │   │       │   ├── pages_6.js
+│   │   │       │   ├── pages_7.js
+│   │   │       │   ├── pages_8.js
+│   │   │       │   ├── pages_9.js
+│   │   │       │   ├── pages_a.js
+│   │   │       │   ├── pages_b.js
+│   │   │       │   ├── pages_c.js
+│   │   │       │   ├── pages_d.js
+│   │   │       │   ├── pages_e.js
+│   │   │       │   ├── pages_f.js
+│   │   │       │   ├── search.css
+│   │   │       │   ├── search.js
+│   │   │       │   ├── searchdata.js
+│   │   │       │   ├── typedefs_0.js
+│   │   │       │   ├── variables_0.js
+│   │   │       │   ├── variables_1.js
+│   │   │       │   ├── variables_2.js
+│   │   │       │   ├── variables_3.js
+│   │   │       │   ├── variables_4.js
+│   │   │       │   ├── variables_5.js
+│   │   │       │   ├── variables_6.js
+│   │   │       │   ├── variables_7.js
+│   │   │       │   ├── variables_8.js
+│   │   │       │   └── variables_9.js
+│   │   │       ├── spaces.svg
+│   │   │       ├── splitbar.png
+│   │   │       ├── splitbard.png
+│   │   │       ├── struct_g_l_f_wallocator.html
+│   │   │       ├── struct_g_l_f_wgamepadstate.html
+│   │   │       ├── struct_g_l_f_wgammaramp.html
+│   │   │       ├── struct_g_l_f_wimage.html
+│   │   │       ├── struct_g_l_f_wvidmode.html
+│   │   │       ├── sync_off.png
+│   │   │       ├── sync_on.png
+│   │   │       ├── tab_a.png
+│   │   │       ├── tab_ad.png
+│   │   │       ├── tab_b.png
+│   │   │       ├── tab_bd.png
+│   │   │       ├── tab_h.png
+│   │   │       ├── tab_hd.png
+│   │   │       ├── tab_s.png
+│   │   │       ├── tab_sd.png
+│   │   │       ├── tabs.css
+│   │   │       ├── topics.html
+│   │   │       ├── vulkan_8md.html
+│   │   │       ├── vulkan_guide.html
+│   │   │       ├── window_8md.html
+│   │   │       └── window_guide.html
+│   │   ├── include
+│   │   │   └── GLFW
+│   │   │       ├── glfw3.h
+│   │   │       └── glfw3native.h
+│   │   ├── lib-arm64
+│   │   │   ├── libglfw.3.dylib
+│   │   │   └── libglfw3.a
+│   │   ├── lib-universal
+│   │   │   ├── libglfw.3.dylib
+│   │   │   └── libglfw3.a
+│   │   ├── lib-x86_64
+│   │   │   ├── libglfw.3.dylib
+│   │   │   └── libglfw3.a
+│   │   ├── LICENSE.md
+│   │   └── README.md
+│   └── nuklear
+│       ├── nuklear_glfw_gl4.h
+│       └── nuklear.h
+└── tree.txt
+
+17 directories, 221 files
