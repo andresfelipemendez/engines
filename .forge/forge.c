@@ -13,6 +13,7 @@
 #include "download.c"
 #include "dict.c"
 #include "filewatch.c"
+#include "generate.c"
 
 int build_engine_lib(void) {
     char *cmd = "clang -std=c99 -g -O0 -DGL_SILENCE_DEPRECATION -Wall -Wextra -Isrc -Ithirdparty -Ithirdparty/glfw/include -Ithirdparty/glad -Ithirdparty/nuklear -dynamiclib src/engine.c thirdparty/glfw/lib-arm64/libglfw3.a -framework Cocoa -framework IOKit -framework CoreVideo -framework OpenGL -o enginelib.dylib";
@@ -21,12 +22,6 @@ int build_engine_lib(void) {
 
 int download_deps(void) {
     return 0;
-}
-
-__attribute__((visibility("default")))
-void generate_project(const char *project_name) {
-    // generate_project
-
 }
 
 __attribute__((visibility("default")))
